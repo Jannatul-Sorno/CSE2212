@@ -1,0 +1,21 @@
+package main;
+
+public class Singleton {
+
+	public static void main(String[] args) {
+		LazySingleton x = LazySingleton.getInstance();
+		LazySingleton y = LazySingleton.getInstance();
+		LazySingleton z = LazySingleton.getInstance();
+		x.s = (x.s).toUpperCase(); 
+		System.out.println("the string form x is:" + x.s);
+		System.out.println("the string form of y is: " +y.s);
+		System.out.println("the string form of z is: " +z.s);
+	//changing variable of instance z 
+      z.s = (z.s).toLowerCase(); 
+
+       System.out.println("String from x is " + x.s); 
+       System.out.println("String from y is " + y.s); 
+      System.out.println("String from z is " + z.s);
+}
+}
+	
